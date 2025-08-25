@@ -2,6 +2,10 @@
 {
   nixpkgs.config.allowUnfree = true;
 
+  imports = [
+    ./zsh-root.nix
+  ];
+
   environment.systemPackages = with pkgs; [
     git vim htop wget ripgrep networkmanagerapplet jq
   ];
