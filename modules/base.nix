@@ -4,6 +4,7 @@
 
   imports = [
     ./zsh-root.nix
+    ./kitty-setup.nix
   ];
 
   environment.systemPackages = with pkgs; [
