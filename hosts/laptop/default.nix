@@ -15,6 +15,9 @@
     packages = [ inputs.home-manager.packages.${pkgs.system}.default ];   
   };
 
+  users.users.root.shell = pkgs.zsh;
+  users.defaultUserShell = pkgs.zsh;
+
   home-manager = {
     extraSpecialArgs = {
       inherit
