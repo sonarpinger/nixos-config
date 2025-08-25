@@ -1,9 +1,10 @@
 { pkgs, ... }:
 
 {
-  # imports = [
-  #   ./firefox.nix
-  # ];
+  imports = [
+    # ./firefox.nix
+    ./kitty.nix
+  ];
 
   home.packages = with pkgs; [
     onlyoffice-desktopeditors
