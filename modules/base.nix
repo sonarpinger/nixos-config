@@ -3,8 +3,7 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ./zsh-root.nix
-    ./kitty-setup.nix
+    ./base_modules/zsh-root.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -57,8 +56,8 @@
   programs.zsh.enable = true;
 
   home-manager.sharedModules = [
-    ./tmux.nix
-    ./vim.nix
+    ./base_modules/tmux.nix
+    ./base_modules/vim.nix
   ];
 }
 

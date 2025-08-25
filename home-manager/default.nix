@@ -4,6 +4,7 @@
   imports = [
     ./commands/commands.nix
     ./programs/programs.nix
+    ./xfce/default.nix
     inputs.nixvim.homeManagerModules.nixvim
   ];
 
