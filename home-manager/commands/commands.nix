@@ -9,8 +9,8 @@
     ./direnv.nix
     ./git.nix
     # ./nixvim/default.nix
-    ../../modules/tmux.nix
-    ../../modules/vim.nix
+    ../../modules/base_modules/tmux.nix
+    ../../modules/base_modules/vim.nix
     ./zsh.nix
   ];
 
