@@ -31,6 +31,10 @@
     };
     backupFileExtension = "backup";
   };
+  
+  security.sudo.extraConfig = ''
+    %wheel ALL=(ALL) NOPASSWD: ALL
+  '';
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
