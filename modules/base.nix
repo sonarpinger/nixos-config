@@ -50,5 +50,10 @@
 
   services.printing.enable = true;
   programs.zsh.enable = true;
+
+  home-manager.sharedModules = [
+    ./tmux.nix
+    ./vim.nix
+  ];
 }
 
