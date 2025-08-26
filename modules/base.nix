@@ -7,7 +7,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    git vim htop wget ripgrep networkmanagerapplet jq
+    git vim htop wget ripgrep networkmanagerapplet jq spike
   ];
 
   networking.networkmanager.enable = true;

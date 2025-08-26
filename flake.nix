@@ -32,9 +32,9 @@
       eachSystem = f: nixpkgs.lib.genAttrs (import systems) (system: f nixpkgs.legacyPackages.${system});
     in
     {
-      devShells = eachSystem (pkgs:
-        import ./devshells.nix { inherit pkgs; lib = nixpkgs.lib; }
-      );
+#       devShells = eachSystem (pkgs:
+#         import ./devshells.nix { inherit pkgs; lib = nixpkgs.lib; }
+#       );
       nixosConfigurations = {
         laptop = nixpkgs.lib.nixosSystem {
           system = system;
