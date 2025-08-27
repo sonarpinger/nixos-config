@@ -8,9 +8,9 @@
   imports = [
     ./direnv.nix
     ./git.nix
-    # ./nixvim/default.nix
+    ./nixvim/default.nix
     ../../modules/base_modules/tmux.nix
-    ../../modules/base_modules/vim.nix
+    # ../../modules/base_modules/vim.nix
     ./zsh.nix
   ];
 

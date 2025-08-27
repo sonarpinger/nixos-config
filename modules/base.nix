@@ -7,7 +7,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    git vim htop wget ripgrep networkmanagerapplet jq spike
+    git htop wget ripgrep networkmanagerapplet jq spike slack
   ];
 
   networking.networkmanager.enable = true;
@@ -57,7 +57,7 @@
 
   home-manager.sharedModules = [
     ./base_modules/tmux.nix
-    ./base_modules/vim.nix
+    # ./base_modules/vim.nix
   ];
 }
 

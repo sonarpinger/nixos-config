@@ -16,6 +16,12 @@
     packages = [ inputs.home-manager.packages.${pkgs.system}.default ];   
   };
 
+  networking.extraHosts =
+    ''
+      192.168.5.6 fsc-filer
+      192.168.5.2 fsc-ad
+    '';
+
   home-manager = {
     extraSpecialArgs = {
       inherit
