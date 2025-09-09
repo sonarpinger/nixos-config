@@ -1,6 +1,5 @@
 {
   programs.nixvim.plugins.blink-cmp = {
-    enable = true;
     settings.sources = {
       copilot = {
         async = true;

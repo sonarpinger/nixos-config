@@ -7,7 +7,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    git htop wget ripgrep networkmanagerapplet jq spike slack
+    git htop wget ripgrep networkmanagerapplet jq spike slack vagrant libvirt qemu_kvm libreoffice
   ];
 
   networking.networkmanager.enable = true;

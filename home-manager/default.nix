@@ -12,7 +12,9 @@
   # manage.
   home.username = username;
   home.homeDirectory = "/home/${username}";
-
+  home.sessionPath = [
+    "/opt/riscv/bin"
+  ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -58,6 +60,7 @@
   home.sessionVariables = {
     GOPATH = "$HOME/.local/go";
     LIBVIRT_DEFAULT_URI = "qemu:///system";
+    RISCV = "/opt/riscv/bin";
   };
 
   dconf.settings = {

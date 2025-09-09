@@ -11,7 +11,7 @@
 
   users.users.${username}= {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" "libvirtd" ];
     shell = pkgs.zsh;
     packages = [ inputs.home-manager.packages.${pkgs.system}.default ];   
   };
@@ -42,9 +42,13 @@
     %wheel ALL=(ALL) NOPASSWD: ALL
   '';
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "nodev";
+  boot.loader.grub.useOSProber = true;
+  boot.loader.grub.efiSupport = true;
+  boot.loader.efi.efiSysMountPoint = "/boot";
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -58,7 +62,6 @@
   virtualisation.docker.enable = true;
 
   programs.virt-manager.enable = true;
-  users.groups.libvirtd.members = [ username ];
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
 

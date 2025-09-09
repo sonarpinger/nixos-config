@@ -1,7 +1,8 @@
 {
   imports = [
     ./blink-cmp.nix
-    # ./copilot.nix
+    ./blink-cmp-copilot.nix
+    ./copilot.nix
     ./glance.nix
     ./illuminate.nix
     ./indent-blankline.nix

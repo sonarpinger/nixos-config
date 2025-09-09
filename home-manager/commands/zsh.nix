@@ -35,7 +35,6 @@
           "tmux"
           "firewalld"
           "tailscale"
-          "web-search"
         ];
       };
     };
