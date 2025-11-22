@@ -4,10 +4,28 @@
 
   imports = [
     ./base_modules/zsh-root.nix
+    # ./wg.nix
   ];
 
   environment.systemPackages = with pkgs; [
-    git htop wget ripgrep networkmanagerapplet jq spike slack vagrant libvirt qemu_kvm libreoffice
+    git
+    htop
+    wget
+    ripgrep
+    networkmanagerapplet
+    jq
+    spike
+    slack
+    vagrant
+    libvirt
+    qemu_kvm
+    libreoffice
+    wireguard-tools
+    dotnet-sdk_9
+    dotnet-aspnetcore_9
+    minicom
+    feh
+    rpi-imager
   ];
 
   networking.networkmanager.enable = true;
